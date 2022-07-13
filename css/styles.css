@@ -1,5 +1,10 @@
+body {
+  background-color: brown;
+}
 h1 {
   font-size: 3rem;
+  text-align: center;
+  border: 3px solid green;
 }
 
 ul {
