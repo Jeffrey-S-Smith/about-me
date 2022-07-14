@@ -1,26 +1,33 @@
 'use strict';
+// Prompt the user for their name
+let personName = prompt('What is your name?', 'Type your name here');
+
+// Show personalized message
+alert('Hi, ' + personName + ' It is very nice to meet you. Welcome to my site.');
+document.write (personName + ' Thank you for visting');
+/*console.log(personName + ' Thank you for visting');*/
 /*Question 1*/
-/*
+
 let livesInSeattle = prompt ('do you live in seattle ').toLowerCase();
 
 if (livesInSeattle === 'yes' || livesInSeattle === 'y'){
 /*console.log('Yes I do live in seattle');*/
-/* alert ('Yes I do live in seattle');*/
-/*
+  alert ('Yes I do live in seattle');
+
 } else if (livesInSeattle === 'no' || livesInSeattle === 'n') {
-*/
-/*console.log ('sorry you are wrong I do live in seattle');*/
-/* alert ('sorry you are wrong I do live in seattle');
+
+  /*console.log ('sorry you are wrong I do live in seattle');*/
+  alert ('sorry you are wrong I do live in seattle');
 
 } else {
 
   /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
-/* alert ('You need to answer with a \'yes\' or a \'no\'');
+  alert ('You need to answer with a \'yes\' or a \'no\'');
 }
 
 
 /*Question 2 took example from https://sebhastian.com/javascript-confirmation-yes-no/#:~:text=You%20can%20create%20a%20JavaScript,can%20specify%20as%20its%20argument.*/
-/*
+
 function showConfirmBox() {
   document.getElementById('overlay').hidden = false;
 }
@@ -37,45 +44,57 @@ function isConfirm(answer) {
   closeConfirmBox();
 }
 
-/*Question 3 *//*
-function box() {
-  let userval = confirm('You sure that is the correct answer?');
-  console.log(userval);
-  if (userval) {
-    document.write('yes is the wrong answer');
-    document.body.style.backgroundColor='red';
-  } else {
-    document.write('no is the correct answer.');
-    document.body.style.backgroundColor='green';
-  }
-
+/*Question 3 */
+function showConfirmBox() {
+  document.getElementById('overlay').hidden = false;
 }
+function closeConfirmBox() {
+  document.getElementById('overlay').hidden = true;
+}
+
+function isConfirm(answer) {
+  if (answer) {
+    alert('yes is the wrong answer');
+  } else {
+    alert('no is the correct answer.');
+  }
+  closeConfirmBox();
+}
+
 
 /*Question 4*/
 
-/*let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();*/
-/*if (woodworking === 'yes' || woodworking === 'y'){*/
- 
-/*console.log('Yes I do enjoy woodworking');*/
-/*alert ('Yes I do enjoy woodworking');*/
+let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();
+if (woodworking === 'yes' || woodworking === 'y'){
 
-/*} else if (woodworking === 'no' || woodworking === 'n') {*/
+  /*console.log('Yes I do enjoy woodworking');*/
+  alert ('Yes I do enjoy woodworking');
+
+} else if (woodworking === 'no' || woodworking === 'n') {
 /*console.log ('sorry you are wrong');*/
-/* alert ('sorry you are wrong');*/
-/*} else { */
+  alert ('sorry you are wrong');
+} else { 
 /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
-/* alert ('You need to answer with a \'yes\' or a \'no\'');
-}*/
+  alert ('You need to answer with a \'yes\' or a \'no\'');
+}
 
 
 /*Question 5*/
 
-/*Two lower
-Two upper
+let technology = prompt ('Do I like Technology?').toLowerCase();
+if (technology === 'yes' || technology === 'y'){
 
-Comment out console.log change them to allerts
-\’yes\’
-*/
+  /*console.log('Yes I like technology');*/
+  alert ('Yes I do enjoy technology');
+
+} else if (technology === 'no' || technology === 'n') {
+/*console.log ('sorry you are wrong');*/
+  alert ('sorry you are wrong');
+} else { 
+  /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+  alert ('You need to answer with a \'yes\' or a \'no\'');
+}
+
 
 /*lab03 */
 
@@ -95,7 +114,7 @@ incrementing the score if the answer correcttly*/
 Indicates through an alert if the guess is “too high” or “too low”.
 It should give the user exactly four opportunities to get the correct answer.
 After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.  */
-/*
+
 let x = Math.floor(Math.random() * 10) + 1;
 let turns = 5;
 let hint = 'Guess my number, 1-10!';
@@ -117,7 +136,7 @@ while (turns > 0) {
   }
 }
 alert('The secret number was ' + x + '.');
-*/
+
 
 /*Question 7*/
 /*As a user, I would like to guess the answer to a question that could have many possibilities so that I can have fun with with a guessing game.
@@ -130,13 +149,16 @@ Consider using a loop of some sort for this question.*/
 /*As a user, I would like to know my final score so that I can know how well I did.
 Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.*/
 
-let myFavAFootball = ['Indianapolis Colts', 'Seattle Seahawks', 'Washington Commanders', 'New Orleans Saints'];
-let userResponse = 'Indianapolis Colts';
-let guessRemaining = 4;
-let guessInput = ' ';
+let myFavAFootball = ['Colts', 'Seahawks', 'Commanders', 'Raiders', 'Saints', 'Chiefs', 'Lions', 'Browns'];
+let userResponse = 'Seahawks';
+let guessRemaining = 6;
+let guessInput = '';
 
 /*what is my Favorite Americian Football Team */
-guessInput = prompt ('what is my Favorite Americian Football Team');
+guessInput = prompt ('What is my Favorite Americian Football Team: the list is Colts, Seahawks, Commanders, Raiders, Saints, Chiefs, Lions, Browns');
+
+/* userResponse === seahawks then console.log (correct answer YOU WIN!)*/
+
 
 while (guessRemaining){
   guessRemaining--;
@@ -151,19 +173,11 @@ while (guessRemaining){
   }
 }
 
-let guesses = 7;
-let guessedCorrectly = false;
 
-for (let i = 0; i < guesses; i++) {
-  console.log(`You have ${guesses - i - 1} guesses left`);
-  for (let j = 0; j < myFavAFootball.lengt.length; j++) {
-    console.log(myFavAFootball[j]);
-    if (userResponse === myFavAFootball[j]) {
-      console.log('You guessed correctly!');
-      guessedCorrectly = true;
-    } 
-  }
-}
+
+/*let score = 0;
+score++*/
+
 
 
 
