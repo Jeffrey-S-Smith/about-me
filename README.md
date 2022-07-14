@@ -1,10 +1,10 @@
-# LAB - 02 & 03
+# LAB - 02 & 03 & 04
 
 ## About Me
 
 Build out an “About Me” webpage that quizzes the user on fun facts gives the user some basic information about who you are and where you came from.
 
-### Author: Jeffrey Smith
+### Author: Jeffrey Smith - Navigator & Brooke Heck - Driver
 
 ### Links and Resources
 
