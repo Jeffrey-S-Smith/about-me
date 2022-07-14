@@ -44,7 +44,22 @@ askQuestionOne();
 //   closeConfirmBox();
 // }
 
+function askQuestionTWo() {
+  let fromWashington = prompt ('Am I from Washington ').toLowerCase();
 
+  if (fromWashington === 'yes' || fromWashington === 'y'){
+    /*console.log('Yes I do live in seattle');*/
+    alert ('No, sorry I\m from Virgina');
+  } else if (fromWashington === 'no' || fromWashington === 'n') {
+    /*console.log ('sorry you are wrong I do live in seattle');*/
+    alert ('Yes, that\'s correct, I\' from Virginia.');
+  } else {
+    /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+    alert ('You need to answer with a \'yes\' or a \'no\'');
+  }
+}
+
+askQuestionTWo();
 
 /*Question 3 */
 function showConfirmBox() {
