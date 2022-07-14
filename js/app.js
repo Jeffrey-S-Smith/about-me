@@ -6,14 +6,17 @@ let personName = prompt('What is your name?', 'Type your name here');
 alert('Hi, ' + personName + ' It is very nice to meet you. Welcome to my site.');
 document.write (personName + ' Thank you for visting');
 /*console.log(personName + ' Thank you for visting');*/
-/*Question 1*/
 
+let numCorrect = 0;
+
+/*Question 1*/
 function askQuestionOne() {
   let livesInSeattle = prompt ('do you live in seattle ').toLowerCase();
 
   if (livesInSeattle === 'yes' || livesInSeattle === 'y'){
     /*console.log('Yes I do live in seattle');*/
     alert ('Yes I do live in seattle');
+    numCorrect++;
   } else if (livesInSeattle === 'no' || livesInSeattle === 'n') {
     /*console.log ('sorry you are wrong I do live in seattle');*/
     alert ('sorry you are wrong I do live in seattle');
@@ -50,10 +53,11 @@ function askQuestionTwo() {
 
   if (fromWashington === 'yes' || fromWashington === 'y'){
     /*console.log('No I'm from Virginia');*/
-    alert ('No, sorry I\m from Virgina');
+    alert ('No, sorry I\'m from Virgina');
   } else if (fromWashington === 'no' || fromWashington === 'n') {
     /*console.log ('That's correct, I'm from virginia');*/
     alert ('Yes, that\'s correct, I\' from Virginia.');
+    numCorrect++;
   } else {
     /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
     alert ('You need to answer with a \'yes\' or a \'no\'');
@@ -89,6 +93,7 @@ function askQuestionThree() {
   } else if (fearOfHeights === 'no' || fearOfHeights === 'n') {
     /*console.log ('Yes that's correct, I'm not afraid of heights');*/
     alert ('Yes, that\'s correct, I\' not afraid of heights.');
+    numCorrect++;
   } else {
     /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
     alert ('You need to answer with a \'yes\' or a \'no\'');
@@ -101,14 +106,13 @@ askQuestionThree();
 function askQuestionFour() {
   let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();
   if (woodworking === 'yes' || woodworking === 'y'){
-
     /*console.log('Yes I do enjoy woodworking');*/
     alert ('Yes I do enjoy woodworking');
-
+    numCorrect++;
   } else if (woodworking === 'no' || woodworking === 'n') {
   /*console.log ('sorry you are wrong');*/
     alert ('sorry you are wrong');
-  } else { 
+  } else {
   /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
     alert ('You need to answer with a \'yes\' or a \'no\'');
   }
@@ -124,6 +128,7 @@ function askQuestionFive() {
 
     /*console.log('Yes I like technology');*/
     alert ('Yes I do enjoy technology');
+    numCorrect++;
 
   } else if (technology === 'no' || technology === 'n') {
   /*console.log ('sorry you are wrong');*/
@@ -170,6 +175,7 @@ function askQuestionSix() {
     console.log(typeof guess);
     if (guess === x) {
       document.write('<p>YOU WIN!</p>');
+      numCorrect++;
       turns = 0;
     } else {
       hint = 'Nope.';
@@ -207,6 +213,7 @@ function askQuestionSeven() {
     for (let i = 0; i < myFavAFootball.length; i++) {
       if (guessInput.toLowerCase() === myFavAFootball[i].toLowerCase()) {
         console.log('your correct');
+        numCorrect++;
         guessRemaining = 0;
       }
     }
@@ -222,7 +229,7 @@ function askQuestionSeven() {
 askQuestionSeven();
 
 
-
+alert(`You got ${numCorrect} out of 7 questions.`);
 
 /*let score = 0;
 score++*/
