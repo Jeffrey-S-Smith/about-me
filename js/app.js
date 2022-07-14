@@ -5,17 +5,17 @@ let livesInSeattle = prompt ('do you live in seattle ').toLowerCase();
 
 if (livesInSeattle === 'yes' || livesInSeattle === 'y'){
 /*console.log('Yes I do live in seattle');*/
- /* alert ('Yes I do live in seattle');
-
+/* alert ('Yes I do live in seattle');*/
+/*
 } else if (livesInSeattle === 'no' || livesInSeattle === 'n') {
 */
-  /*console.log ('sorry you are wrong I do live in seattle');*/
- /* alert ('sorry you are wrong I do live in seattle');
+/*console.log ('sorry you are wrong I do live in seattle');*/
+/* alert ('sorry you are wrong I do live in seattle');
 
 } else {
 
   /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
- /* alert ('You need to answer with a \'yes\' or a \'no\'');
+/* alert ('You need to answer with a \'yes\' or a \'no\'');
 }
 
 
@@ -52,23 +52,20 @@ function box() {
 }
 
 /*Question 4*/
-/*
-let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();
 
-if (woodworking === 'yes' || woodworking === 'y'){
-  /*console.log('Yes I do enjoy woodworking');*/
-   
-   /*alert ('Yes I do enjoy woodworking');*/
- /*
-} else if (woodworking === 'no' || woodworking === 'n') {
-  /*console.log ('sorry you are wrong');*/
- /* alert ('sorry you are wrong');
-} else { */
-  /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
- /* alert ('You need to answer with a \'yes\' or a \'no\'');*/
-/*}
+/*let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();*/
+/*if (woodworking === 'yes' || woodworking === 'y'){*/
+ 
+/*console.log('Yes I do enjoy woodworking');*/
+/*alert ('Yes I do enjoy woodworking');*/
 
-*/
+/*} else if (woodworking === 'no' || woodworking === 'n') {*/
+/*console.log ('sorry you are wrong');*/
+/* alert ('sorry you are wrong');*/
+/*} else { */
+/* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+/* alert ('You need to answer with a \'yes\' or a \'no\'');
+}*/
 
 
 /*Question 5*/
@@ -133,10 +130,41 @@ Consider using a loop of some sort for this question.*/
 /*As a user, I would like to know my final score so that I can know how well I did.
 Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.*/
 
-let myFavAFootball = ["Indianapolis Colts", "Seattle Seahawks", "Washington Commanders", "New Orleans Saints"];
-let userResponse = "Indianapolis Colts";
+let myFavAFootball = ['Indianapolis Colts', 'Seattle Seahawks', 'Washington Commanders', 'New Orleans Saints'];
+let userResponse = 'Indianapolis Colts';
+let guessRemaining = 4;
+let guessInput = ' ';
 
-while () {
-  
-  
+/*what is my Favorite Americian Football Team */
+guessInput = prompt ('what is my Favorite Americian Football Team');
+
+while (guessRemaining){
+  guessRemaining--;
+  console.log('You have ${guessRemaining} guesses left');
+
+  for (let i = 0; i < myFavAFootball.length; i++) {
+    if (userResponse === myFavAFootball[i]) {
+      console.log('your correct');
+    } else {
+      console.log('your wrong');
+    }
   }
+}
+
+let guesses = 7;
+let guessedCorrectly = false;
+
+for (let i = 0; i < guesses; i++) {
+  console.log(`You have ${guesses - i - 1} guesses left`);
+  for (let j = 0; j < myFavAFootball.lengt.length; j++) {
+    console.log(myFavAFootball[j]);
+    if (userResponse === myFavAFootball[j]) {
+      console.log('You guessed correctly!');
+      guessedCorrectly = true;
+    } 
+  }
+}
+
+
+
+
