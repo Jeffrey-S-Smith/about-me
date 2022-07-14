@@ -98,20 +98,23 @@ function askQuestionThree() {
 askQuestionThree();
 
 /*Question 4*/
+function askQuestionFour() {
+  let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();
+  if (woodworking === 'yes' || woodworking === 'y'){
 
-let woodworking = prompt ('Do I enjoy woodworking?').toLowerCase();
-if (woodworking === 'yes' || woodworking === 'y'){
+    /*console.log('Yes I do enjoy woodworking');*/
+    alert ('Yes I do enjoy woodworking');
 
-  /*console.log('Yes I do enjoy woodworking');*/
-  alert ('Yes I do enjoy woodworking');
-
-} else if (woodworking === 'no' || woodworking === 'n') {
-/*console.log ('sorry you are wrong');*/
-  alert ('sorry you are wrong');
-} else { 
-/* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
-  alert ('You need to answer with a \'yes\' or a \'no\'');
+  } else if (woodworking === 'no' || woodworking === 'n') {
+  /*console.log ('sorry you are wrong');*/
+    alert ('sorry you are wrong');
+  } else { 
+  /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+    alert ('You need to answer with a \'yes\' or a \'no\'');
+  }
 }
+
+askQuestionFour();
 
 
 /*Question 5*/
