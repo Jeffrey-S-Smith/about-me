@@ -118,20 +118,23 @@ askQuestionFour();
 
 
 /*Question 5*/
+function askQuestionFive() {
+  let technology = prompt ('Do I like Technology?').toLowerCase();
+  if (technology === 'yes' || technology === 'y'){
 
-let technology = prompt ('Do I like Technology?').toLowerCase();
-if (technology === 'yes' || technology === 'y'){
+    /*console.log('Yes I like technology');*/
+    alert ('Yes I do enjoy technology');
 
-  /*console.log('Yes I like technology');*/
-  alert ('Yes I do enjoy technology');
-
-} else if (technology === 'no' || technology === 'n') {
-/*console.log ('sorry you are wrong');*/
-  alert ('sorry you are wrong');
-} else { 
-  /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
-  alert ('You need to answer with a \'yes\' or a \'no\'');
+  } else if (technology === 'no' || technology === 'n') {
+  /*console.log ('sorry you are wrong');*/
+    alert ('sorry you are wrong');
+  } else { 
+    /* console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+    alert ('You need to answer with a \'yes\' or a \'no\'');
+  }
 }
+
+askQuestionFive();
 
 
 /*lab03 */
