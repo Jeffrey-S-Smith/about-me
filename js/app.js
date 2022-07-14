@@ -44,14 +44,15 @@ askQuestionOne();
 //   closeConfirmBox();
 // }
 
-function askQuestionTWo() {
+// Question Two
+function askQuestionTwo() {
   let fromWashington = prompt ('Am I from Washington ').toLowerCase();
 
   if (fromWashington === 'yes' || fromWashington === 'y'){
-    /*console.log('Yes I do live in seattle');*/
+    /*console.log('No I'm from Virginia');*/
     alert ('No, sorry I\m from Virgina');
   } else if (fromWashington === 'no' || fromWashington === 'n') {
-    /*console.log ('sorry you are wrong I do live in seattle');*/
+    /*console.log ('That's correct, I'm from virginia');*/
     alert ('Yes, that\'s correct, I\' from Virginia.');
   } else {
     /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
@@ -59,25 +60,42 @@ function askQuestionTWo() {
   }
 }
 
-askQuestionTWo();
+askQuestionTwo();
 
 /*Question 3 */
-function showConfirmBox() {
-  document.getElementById('overlay').hidden = false;
-}
-function closeConfirmBox() {
-  document.getElementById('overlay').hidden = true;
-}
+// function showConfirmBox() {
+//   document.getElementById('overlay').hidden = false;
+// }
+// function closeConfirmBox() {
+//   document.getElementById('overlay').hidden = true;
+// }
 
-function isConfirm(answer) {
-  if (answer) {
-    alert('yes is the wrong answer');
+// function isConfirm(answer) {
+//   if (answer) {
+//     alert('yes is the wrong answer');
+//   } else {
+//     alert('no is the correct answer.');
+//   }
+//   closeConfirmBox();
+// }
+
+// Question 3
+function askQuestionThree() {
+  let fearOfHeights = prompt ('Is fear of heights my number one fear?').toLowerCase();
+
+  if (fearOfHeights === 'yes' || fearOfHeights === 'y'){
+    /*console.log('No, I"m not afraid of heights');*/
+    alert ('That\'s incorrect, I\'m not afraid of heights');
+  } else if (fearOfHeights === 'no' || fearOfHeights === 'n') {
+    /*console.log ('Yes that's correct, I'm not afraid of heights');*/
+    alert ('Yes, that\'s correct, I\' not afraid of heights.');
   } else {
-    alert('no is the correct answer.');
+    /*console.log ('You need to answer with a \'yes\' or a \'no\'');*/
+    alert ('You need to answer with a \'yes\' or a \'no\'');
   }
-  closeConfirmBox();
 }
 
+askQuestionThree();
 
 /*Question 4*/
 
