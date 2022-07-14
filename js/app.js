@@ -196,24 +196,27 @@ Consider using a loop of some sort for this question.*/
 /*As a user, I would like to know my final score so that I can know how well I did.
 Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.*/
 function askQuestionSeven() {
-  let myFavAFootball = ['Colts', 'Seahawks', 'Commanders', 'Raiders', 'Saints', 'Chiefs', 'Lions', 'Browns'];
-  let userResponse = 'Seahawks';
+  let myFavAFootball = ['Seahawks', 'Commanders', 'Saints'];
   let guessRemaining = 6;
   let guessInput = '';
   /*what is my Favorite Americian Football Team */
-  guessInput = prompt ('What is my Favorite Americian Football Team: the list is Colts, Seahawks, Commanders, Raiders, Saints, Chiefs, Lions, Browns');
+  guessInput = prompt('What American Football Teams have I visited?');
   /* userResponse === seahawks then console.log (correct answer YOU WIN!)*/
-  while (guessRemaining){
-    guessRemaining--;
+  while (guessRemaining) {
     console.log('You have ${guessRemaining} guesses left');
     for (let i = 0; i < myFavAFootball.length; i++) {
-      if (userResponse === myFavAFootball[i]) {
+      if (guessInput.toLowerCase() === myFavAFootball[i].toLowerCase()) {
         console.log('your correct');
-      } else {
-        console.log('your wrong');
+        guessRemaining = 0;
       }
     }
+    if(!(guessRemaining === 0)) {
+      console.log('your wrong: ', guessRemaining);
+      guessInput = prompt('That\'s incorrect, try again\nWhat American Football Teams have I visited?');
+      guessRemaining--;
+    }
   }
+  alert('These are the correct answers: ' + myFavAFootball);
 }
 
 askQuestionSeven();
