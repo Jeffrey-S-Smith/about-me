@@ -156,27 +156,33 @@ Indicates through an alert if the guess is “too high” or “too low”.
 It should give the user exactly four opportunities to get the correct answer.
 After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.  */
 
-let x = Math.floor(Math.random() * 10) + 1;
-let turns = 5;
-let hint = 'Guess my number, 1-10!';
 
-while (turns > 0) {
-  let guess = prompt(hint +
-      ' You have ' + turns + ' guesses left.');
-  if (!guess) break;
-  guess = Number(guess);
-  console.log(typeof guess);
-  if (guess === x) {
-    document.write('<p>YOU WIN!</p>');
-    turns = 0;
-  } else {
-    hint = 'Nope.';
-    if (guess < x) hint += ' Too low!';
-    if (guess > x) hint += ' Too high!';
-    turns = turns - 1;
+function askQuestionSix() {
+  let x = Math.floor(Math.random() * 10) + 1;
+  let turns = 5;
+  let hint = 'Guess my number, 1-10!';
+
+  while (turns > 0) {
+    let guess = prompt(hint +
+        ' You have ' + turns + ' guesses left.');
+    if (!guess) break;
+    guess = Number(guess);
+    console.log(typeof guess);
+    if (guess === x) {
+      document.write('<p>YOU WIN!</p>');
+      turns = 0;
+    } else {
+      hint = 'Nope.';
+      if (guess < x) hint += ' Too low!';
+      if (guess > x) hint += ' Too high!';
+      turns = turns - 1;
+    }
   }
+  alert('The secret number was ' + x + '.');
 }
-alert('The secret number was ' + x + '.');
+
+askQuestionSix();
+
 
 
 /*Question 7*/
@@ -189,30 +195,29 @@ Consider using a loop of some sort for this question.*/
 
 /*As a user, I would like to know my final score so that I can know how well I did.
 Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.*/
-
-let myFavAFootball = ['Colts', 'Seahawks', 'Commanders', 'Raiders', 'Saints', 'Chiefs', 'Lions', 'Browns'];
-let userResponse = 'Seahawks';
-let guessRemaining = 6;
-let guessInput = '';
-
-/*what is my Favorite Americian Football Team */
-guessInput = prompt ('What is my Favorite Americian Football Team: the list is Colts, Seahawks, Commanders, Raiders, Saints, Chiefs, Lions, Browns');
-
-/* userResponse === seahawks then console.log (correct answer YOU WIN!)*/
-
-
-while (guessRemaining){
-  guessRemaining--;
-  console.log('You have ${guessRemaining} guesses left');
-
-  for (let i = 0; i < myFavAFootball.length; i++) {
-    if (userResponse === myFavAFootball[i]) {
-      console.log('your correct');
-    } else {
-      console.log('your wrong');
+function askQuestionSeven() {
+  let myFavAFootball = ['Colts', 'Seahawks', 'Commanders', 'Raiders', 'Saints', 'Chiefs', 'Lions', 'Browns'];
+  let userResponse = 'Seahawks';
+  let guessRemaining = 6;
+  let guessInput = '';
+  /*what is my Favorite Americian Football Team */
+  guessInput = prompt ('What is my Favorite Americian Football Team: the list is Colts, Seahawks, Commanders, Raiders, Saints, Chiefs, Lions, Browns');
+  /* userResponse === seahawks then console.log (correct answer YOU WIN!)*/
+  while (guessRemaining){
+    guessRemaining--;
+    console.log('You have ${guessRemaining} guesses left');
+    for (let i = 0; i < myFavAFootball.length; i++) {
+      if (userResponse === myFavAFootball[i]) {
+        console.log('your correct');
+      } else {
+        console.log('your wrong');
+      }
     }
   }
 }
+
+askQuestionSeven();
+
 
 
 
